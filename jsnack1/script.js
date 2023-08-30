@@ -23,7 +23,7 @@ Il software stampa il maggiore. */
 const array = [];
 let i = 0;
 while (i <= 1) {
-  const number = prompt("Scrivi un numero");
+  const number = Number(prompt("Scrivi un numero"));
 
   if (!isNaN(number)) {
     array.push(number);
@@ -33,4 +33,11 @@ while (i <= 1) {
   }
 
   i++;
+}
+if (array[0] > array[1]) {
+  console.log(array[0] + "è maggiore di " + array[1]);
+} else if (array[0] < array[1]) {
+  console.log(array[0] + "è minore di " + array[1]);
+} else {
+  console.log(array[0], array[1], "sono pari");
 }
